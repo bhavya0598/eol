@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.135" height="83.135" viewBox="0 0 83.135 83.135">
+  <g id="icon" transform="translate(-263.216 -330.05)">
+    <g id="Group_91" data-name="Group 91" transform="translate(264.216 331.05)">
+      <path id="Path_765" data-name="Path 765" d="M304.784,331.05a40.568,40.568,0,1,1-40.568,40.568A40.569,40.569,0,0,1,304.784,331.05Z" transform="translate(-264.216 -331.05)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path id="Path_766" data-name="Path 766" d="M312.274,405.363a4.067,4.067,0,0,1,2.876-6.944v-5.294a.741.741,0,0,0-.738-.739h-5.294a4.068,4.068,0,0,1-8.135,0h-5.294a.741.741,0,0,0-.738.739v18.723a.74.74,0,0,0,.738.738h18.723a.74.74,0,0,0,.738-.738v-5.294A4.056,4.056,0,0,1,312.274,405.363Z" transform="translate(-8.467 -16.898)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_767" data-name="Path 767" d="M304.822,374.445a4.054,4.054,0,0,0-.008-3.113l4.885-2.039a.74.74,0,0,0,.4-.966l-2.038-4.886a4.067,4.067,0,0,0-3.133-7.507l-2.039-4.886a.741.741,0,0,0-.966-.4l-17.279,7.21a.741.741,0,0,0-.4.966l7.21,17.279a.741.741,0,0,0,.966.4l4.886-2.039a4.067,4.067,0,0,0,7.515-.02Z" transform="translate(-5.502 -5.384)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_768" data-name="Path 768" d="M325.707,371.707a4.068,4.068,0,0,1-2.876,6.944v5.294a.741.741,0,0,0,.739.738h5.293a4.068,4.068,0,1,1,8.135,0h5.294a.741.741,0,0,0,.738-.738V365.221a.741.741,0,0,0-.738-.738H323.57a.741.741,0,0,0-.739.738v5.294A4.053,4.053,0,0,1,325.707,371.707Z" transform="translate(-16.148 -9.211)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_769" data-name="Path 769" d="M328.508,387.963a4.057,4.057,0,0,0-1.192,2.876h-5.294a.741.741,0,0,0-.738.739v5.294a4.067,4.067,0,1,0,0,8.135V410.3a.74.74,0,0,0,.738.738h18.723a.74.74,0,0,0,.738-.738V391.578a.741.741,0,0,0-.738-.739h-5.294a4.068,4.068,0,0,0-6.944-2.876Z" transform="translate(-14.602 -15.351)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

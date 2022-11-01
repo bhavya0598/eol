@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81.957" height="81.957" viewBox="0 0 81.957 81.957">
+  <g id="icon" transform="translate(1 1)">
+    <g id="Group_1" data-name="Group 1">
+      <path id="Path_1" data-name="Path 1" d="M107.908,364.925A39.979,39.979,0,1,1,67.929,404.9,39.98,39.98,0,0,1,107.908,364.925Z" transform="translate(-67.929 -364.925)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path id="Path_2" data-name="Path 2" d="M113.405,430.9V433a5.156,5.156,0,0,0,5.141,5.141h19.333a7.282,7.282,0,0,0,1.425,3.784,6.852,6.852,0,0,0,6.092,2.509,16.037,16.037,0,0,1-2.011-3.571,9.259,9.259,0,0,1-.435-2.722h.834A5.156,5.156,0,0,0,148.924,433V421.32a5.156,5.156,0,0,0-5.141-5.14h-1.243" transform="translate(-80.936 -379.585)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_3" data-name="Path 3" d="M128.266,394.83H86.611a5.156,5.156,0,0,0-5.14,5.14v19.688a5.156,5.156,0,0,0,5.14,5.14h3.6a13.55,13.55,0,0,1-.637,3.98A23.37,23.37,0,0,1,86.63,434s5.516.81,8.908-3.669a10.672,10.672,0,0,0,2.085-5.533h30.642a5.156,5.156,0,0,0,5.141-5.14V399.97A5.156,5.156,0,0,0,128.266,394.83Z" transform="translate(-71.802 -373.478)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Group_2" data-name="Group 2" transform="translate(16.808 28.859)">
+      <line id="Line_1" data-name="Line 1" x2="37.656" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_2" data-name="Line 2" x2="37.656" transform="translate(0 4.939)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_3" data-name="Line 3" x2="37.656" transform="translate(0 9.88)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_4" data-name="Line 4" x2="28.013" transform="translate(0 14.819)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

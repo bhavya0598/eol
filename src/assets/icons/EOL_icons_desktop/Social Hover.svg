@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="167.368" height="66.584" viewBox="0 0 167.368 66.584">
+  <g id="Social_Hover" data-name="Social Hover" transform="translate(-1806.834 -1346.286)" opacity="0.895">
+    <g id="Social_arrow" data-name="Social arrow" transform="translate(1731.096 839.578)">
+      <path id="arrow" d="M-6145.265,30a2,2,0,0,1-2-2V2a2,2,0,0,1,2-2h74.637a2,2,0,0,1,2,2V28a2,2,0,0,1-2,2ZM-6156,15.507l8.735-14.139V28.633Z" transform="translate(6311.736 525)" fill="#ece8aa"/>
+      <text id="Social" transform="translate(173.107 531)" font-size="15" font-family="Lato-Black, Lato Black" font-weight="800" letter-spacing="0.06em" opacity="0.901"><tspan x="0" y="15">SOCIAL</tspan></text>
+    </g>
+    <g id="Social_icon" data-name="Social icon" transform="translate(1807.834 1347.286)">
+      <g id="Group_15" data-name="Group 15">
+        <path id="Path_73" data-name="Path 73" d="M91.321,614.7a32.292,32.292,0,1,1-32.293,32.293A32.293,32.293,0,0,1,91.321,614.7Z" transform="translate(-59.028 -614.701)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="Path_74" data-name="Path 74" d="M104.5,677.849v1.693a4.164,4.164,0,0,0,4.152,4.152h15.615a5.891,5.891,0,0,0,1.151,3.057,5.533,5.533,0,0,0,4.921,2.026,12.947,12.947,0,0,1-1.624-2.885,7.475,7.475,0,0,1-.351-2.2h.674a4.164,4.164,0,0,0,4.152-4.152v-9.435a4.164,4.164,0,0,0-4.152-4.152h-1" transform="translate(-78.278 -636.396)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_75" data-name="Path 75" d="M110.368,644.6H76.722a4.165,4.165,0,0,0-4.152,4.152v15.9a4.164,4.164,0,0,0,4.152,4.152h2.9a10.94,10.94,0,0,1-.514,3.215,18.888,18.888,0,0,1-2.375,4.219,8.088,8.088,0,0,0,7.2-2.964,8.614,8.614,0,0,0,1.684-4.469h24.751a4.164,4.164,0,0,0,4.152-4.152v-15.9A4.165,4.165,0,0,0,110.368,644.6Z" transform="translate(-64.76 -627.359)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_16" data-name="Group 16" transform="translate(13.577 23.31)">
+        <line id="Line_7" data-name="Line 7" x2="30.416" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_8" data-name="Line 8" x2="30.416" transform="translate(0 3.99)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_9" data-name="Line 9" x2="30.416" transform="translate(0 7.981)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_10" data-name="Line 10" x2="22.627" transform="translate(0 11.97)" fill="none" stroke="#ece7b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

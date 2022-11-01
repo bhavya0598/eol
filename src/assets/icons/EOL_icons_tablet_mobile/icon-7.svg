@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.137" height="83.137" viewBox="0 0 83.137 83.137">
+  <g id="icon" transform="translate(1 1)">
+    <path id="Path_461" data-name="Path 461" d="M474.583,972.127c-1.563-1.569-4.365-2.174-7.178.93-2.88-3.043-5.667-2.379-7.2-.777a4.577,4.577,0,0,0-.357,5.479c1.188,1.621,7.684,7.508,7.684,7.508s6.368-6.024,7.521-7.67A4.578,4.578,0,0,0,474.583,972.127Z" transform="translate(-426.682 -955.937)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Group_55" data-name="Group 55" transform="translate(15.508 32.094)">
+      <path id="Path_462" data-name="Path 462" d="M457.278,1023.034a13.062,13.062,0,1,1,.493-23.839,16.333,16.333,0,0,1,3.041-2.168c-.119-.073-.228-.156-.348-.227a16.437,16.437,0,1,0-.251,28.54" transform="translate(-435.757 -994.568)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_463" data-name="Path 463" d="M473.061,999.488a13.062,13.062,0,1,1-.5,23.814,16.331,16.331,0,0,1-3.05,2.176c.119.073.227.156.348.227a16.437,16.437,0,1,0,.251-28.54" transform="translate(-445.056 -994.705)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_464" data-name="Path 464" d="M472.6,1024.983a16.424,16.424,0,0,0,.5-23.814,13.026,13.026,0,0,0-3.011,1.783,13.042,13.042,0,0,1-.438,20.108" transform="translate(-445.094 -996.386)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_465" data-name="Path 465" d="M464.1,1000.954a16.422,16.422,0,0,0-.493,23.84,13.056,13.056,0,0,0,3.035-1.793,13.04,13.04,0,0,1,.438-20.108" transform="translate(-442.082 -996.327)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_56" data-name="Group 56" transform="translate(0)">
+      <path id="Path_466" data-name="Path 466" d="M454.922,950.271a40.568,40.568,0,1,1-40.569,40.569A40.57,40.57,0,0,1,454.922,950.271Z" transform="translate(-414.353 -950.271)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

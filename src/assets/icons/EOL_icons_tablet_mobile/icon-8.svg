@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.138" height="83.137" viewBox="0 0 83.138 83.137">
+  <g id="icon" transform="translate(1 1)">
+    <g id="Group_53" data-name="Group 53">
+      <path id="Path_456" data-name="Path 456" d="M125.74,741.191A40.568,40.568,0,1,1,85.171,781.76,40.57,40.57,0,0,1,125.74,741.191Z" transform="translate(-85.171 -741.191)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path id="Path_457" data-name="Path 457" d="M173.705,779.491a5.85,5.85,0,0,1-11.7,0v-3.3a5.85,5.85,0,0,1,11.7,0Z" transform="translate(-106.337 -749.222)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_458" data-name="Path 458" d="M162.36,790.938a13.7,13.7,0,0,1,2.692.339c2.6.754,4.353,4.169,4.353,7.067v15.731h-12.9v-15.43a3.288,3.288,0,0,0-1.029-2.39L142.942,784.4a2.831,2.831,0,0,1,3.893-4.112l10.819,9.081a5.637,5.637,0,0,0,1.906,1.063A10.377,10.377,0,0,0,162.36,790.938Z" transform="translate(-100.842 -751.747)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_459" data-name="Path 459" d="M104.176,779.491a5.85,5.85,0,0,0,11.7,0v-3.3a5.85,5.85,0,0,0-11.7,0Z" transform="translate(-90.407 -749.222)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_460" data-name="Path 460" d="M109.571,790.938a13.7,13.7,0,0,0-2.692.339c-2.6.754-4.353,4.169-4.353,7.067v15.731h12.9v-15.43a3.289,3.289,0,0,1,1.03-2.39L128.99,784.4a2.831,2.831,0,0,0-3.894-4.112l-10.818,9.081a5.637,5.637,0,0,1-1.906,1.063A10.377,10.377,0,0,1,109.571,790.938Z" transform="translate(-89.952 -751.747)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_60" data-name="Line 60" y1="6.456" x2="6.455" transform="translate(45.196 18.928)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_61" data-name="Line 61" x1="6.456" y1="6.456" transform="translate(29.038 18.928)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_62" data-name="Line 62" y1="9.622" transform="translate(40.339 13.871)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81.957" height="81.957" viewBox="0 0 81.957 81.957">
+  <g id="icon" transform="translate(1 1)">
+    <g id="Group_14" data-name="Group 14">
+      <path id="Path_26" data-name="Path 26" d="M471.081,995.092a39.979,39.979,0,1,1-39.979,39.979A39.98,39.98,0,0,1,471.081,995.092Z" transform="translate(-431.102 -995.092)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path id="Path_27" data-name="Path 27" d="M494.968,1040.552l-7.078,4.085v-3.52a1.107,1.107,0,0,0-1.1-1.1H468.476a1.107,1.107,0,0,0-1.1,1.1v13.6a1.108,1.108,0,0,0,1.1,1.105h18.311a1.108,1.108,0,0,0,1.1-1.105v-3.52l7.078,4.086Z" transform="translate(-441.475 -1007.94)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Rectangle_2" data-name="Rectangle 2" d="M7.981,0H51.009a7.979,7.979,0,0,1,7.979,7.979V32.374a7.98,7.98,0,0,1-7.98,7.98H7.98A7.98,7.98,0,0,1,0,32.374V7.981A7.981,7.981,0,0,1,7.981,0Z" transform="translate(10.263 19.802)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="44.564" height="33.023" transform="translate(17.476 23.467)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="1.606" cy="1.606" rx="1.606" ry="1.606" transform="translate(12.328 38.373)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
