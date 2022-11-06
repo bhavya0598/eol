@@ -6,15 +6,17 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactUsComponent
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

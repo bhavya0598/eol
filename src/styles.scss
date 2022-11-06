@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.scss";
+@import "variables.scss";
+
+@font-face {
+  font-family: "Lato";
+  src: url(assets/fonts/Lato/Lato-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+// from breakpoints to the largest screen
+@include media-breakpoint-up(lg) { 
+  i{
+    font-size:60px;
+  }
+ }
+
+// from smallest screen to the breakpoint
+@include media-breakpoint-down(lg) { 
+  i{
+    font-size: 30px;
+    color: var(--tablet-mobile-icon-color);
+  }
+ }

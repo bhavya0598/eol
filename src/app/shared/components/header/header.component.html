@@ -1,0 +1,33 @@
+<!-- this is a separate component on top of every page
+web:- 3 columns, menu logo, eol title, share this page icon
+tablet: 2 columns, menu logo and eol logo
+mobile:  2 columns, menu logo and eol logo-->
+
+<div class="container-fluid position-absolute">
+  <div class="row mt-3 justify-content-between align-items-center">
+    <div class="col-lg-4 col-6">
+      <i class="bi bi-list ps-3" (click)="openSideMenu()"></i>
+    </div>
+    <div class="col-lg-4 d-none d-lg-block">
+      <img
+        class="img-fluid"
+        src="../../../../assets/icons/EOL_icons_desktop/Logo.svg"
+        alt="logo"
+        (click)="routeToHome()"
+        width="auto"
+      />
+    </div>
+    <div class="col-lg-4 d-none d-lg-block">
+      <i class="bi bi-box-arrow-up float-end shareIcon pe-3" ngbTooltip="Share this page" (click)="shareCurrentPageLink()"></i>
+    </div>
+    <div class="col-6 d-block d-lg-none">
+      <img
+      class="img-fluid float-end pe-3"
+      src="../../../../assets/icons/EOL_icons_tablet_mobile/Logo.svg"
+      alt="logo"
+      (click)="routeToHome()"
+      width="auto"
+    />
+    </div>
+  </div>
+</div>
