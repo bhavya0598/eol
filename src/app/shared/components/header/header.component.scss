@@ -1,4 +1,4 @@
-i:hover{
+i:hover {
   color: var(--tablet-mobile-icon-color);
 }
 i,
@@ -10,4 +10,8 @@ img:hover {
 }
 .shareIcon:hover {
   color: white;
+}
+.mobileIconsText{
+  text-decoration: none;
+  color: var(--tablet-mobile-icon-color);
 }

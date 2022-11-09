@@ -1,14 +1,14 @@
-<!-- this is a separate component on top of every page
+<!-- this is a header on top of every page
 web:- 3 columns, menu logo, eol title, share this page icon
 tablet: 2 columns, menu logo and eol logo
 mobile:  2 columns, menu logo and eol logo-->
 
 <div class="container-fluid position-absolute">
   <div class="row mt-3 justify-content-between align-items-center">
-    <div class="col-lg-4 col-6">
-      <i class="bi bi-list ps-3" (click)="openSideMenu()"></i>
+    <div class="col-lg-3 col-6">
+      <i class="bi bi-list ps-3" (click)="openNoBackdrop(content)"></i>
     </div>
-    <div class="col-lg-4 d-none d-lg-block">
+    <div class="col-lg-6 d-none d-lg-block">
       <img
         class="img-fluid"
         src="../../../../assets/icons/EOL_icons_desktop/Logo.svg"
@@ -17,17 +17,126 @@ mobile:  2 columns, menu logo and eol logo-->
         width="auto"
       />
     </div>
-    <div class="col-lg-4 d-none d-lg-block">
-      <i class="bi bi-box-arrow-up float-end shareIcon pe-3" ngbTooltip="Share this page" (click)="shareCurrentPageLink()"></i>
+    <div class="col-lg-3 d-none d-lg-block">
+      <i
+        class="bi bi-box-arrow-up float-end shareIcon pe-3"
+        ngbTooltip="Share this page"
+        (click)="shareCurrentPageLink()"
+      ></i>
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
-      class="img-fluid float-end pe-3"
-      src="../../../../assets/icons/EOL_icons_tablet_mobile/Logo.svg"
-      alt="logo"
-      (click)="routeToHome()"
-      width="auto"
-    />
+        class="img-fluid float-end pe-3"
+        src="../../../../assets/icons/EOL_icons_tablet_mobile/Logo.svg"
+        alt="logo"
+        (click)="routeToHome()"
+        width="auto"
+      />
     </div>
   </div>
 </div>
+
+<!-- sidemenu 
+for desktop overlay with black shade effect
+for mobile and tablet fullscreen and show socials icon in the end (images available)
+time/close icon at first followed by the list of icons
+when hover on icons highlight the icon plus show tag (images available)-->
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-body">
+    <i class="bi bi-x" (click)="offcanvas.dismiss('Cross click')"></i>
+    <div class="container">
+      <div
+        *ngIf="screenWidth > 768; else elseBlock"
+        class="row gy-2 flex-column text-center"
+      >
+        <div *ngFor="let item of sideMenuItems" class="col-12">
+          <a [routerLink]="item.href">
+            <ng-container
+              *ngIf="!item.isActive; then nonActiveImage; else activeImage"
+            >
+            </ng-container>
+            <ng-template #nonActiveImage>
+              <img
+                class="iconImageOnHover"
+                src="../../../../assets/icons/EOL_icons_desktop/{{
+                  item.srcImg
+                }}"
+                [alt]="item.name"
+                (mouseover)="item.srcImg = item.hoverImgLink"
+                (mouseout)="item.srcImg = item.imageLink"
+              />
+            </ng-template>
+            <ng-template #activeImage>
+              <img ngbAutoFocus
+                class="iconImageonHover"
+                src="../../../../assets/icons/EOL_icons_desktop/{{
+                  item.activeImgLink
+                }}"
+                [alt]="item.name"
+              />
+            </ng-template>
+          </a>
+        </div>
+      </div>
+      <ng-template #elseBlock>
+        <div class="row gy-3 flex-column text-center">
+          <div *ngFor="let item of sideMenuItems" class="col-12">
+            <a class="mobileIconsText" [routerLink]="item.href">{{
+              item.name
+            }}</a>
+          </div>
+        </div>
+        <div class="row mt-4 text-center">
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/fb icon.svg"
+              alt="facebook"
+              width="27"
+              height="27"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/IG icon.svg"
+              alt="Instagram"
+              width="27"
+              height="27"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/Twitter icon.svg"
+              alt="Twitter"
+              width="27"
+              height="27"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/G+ icon.svg"
+              alt="Google Plus"
+              width="27"
+              height="27"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/Linkedin icon.svg"
+              alt="Linkedin"
+              width="27"
+              height="27"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              src="../../../../assets/icons/EOL_icons_tablet_mobile/Pinterest icon.svg"
+              alt="Pinterest"
+              width="27"
+              height="27"
+            />
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</ng-template>
