@@ -25,7 +25,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

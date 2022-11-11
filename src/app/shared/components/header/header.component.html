@@ -1,14 +1,14 @@
-<!-- this is a header on top of every page
-web:- 3 columns, menu logo, eol title, share this page icon
-tablet: 2 columns, menu logo and eol logo
-mobile:  2 columns, menu logo and eol logo-->
-
-<div class="container-fluid position-absolute">
-  <div class="row mt-3 justify-content-between align-items-center">
+<!-- header -->
+<div class="container-fluid fixed-top custom-header">
+  <div class="row justify-content-between align-items-center">
     <div class="col-lg-3 col-6">
-      <i class="bi bi-list ps-3" (click)="openNoBackdrop(content)"></i>
+      <i
+        class="bi bi-list ps-3 headerIcon"
+        [ngClass]="menuOpened ? 'invisible' : 'visible'"
+        (click)="openSideMenu(content)"
+      ></i>
     </div>
-    <div class="col-lg-6 d-none d-lg-block">
+    <div class="col-lg-6 text-center d-none d-lg-block">
       <img
         class="img-fluid"
         src="../../../../assets/icons/EOL_icons_desktop/Logo.svg"
@@ -17,12 +17,14 @@ mobile:  2 columns, menu logo and eol logo-->
         width="auto"
       />
     </div>
-    <div class="col-lg-3 d-none d-lg-block">
-      <i
-        class="bi bi-box-arrow-up float-end shareIcon pe-3"
-        ngbTooltip="Share this page"
-        (click)="shareCurrentPageLink()"
-      ></i>
+    <div class="col-lg-3 d-none d-lg-flex justify-content-end">
+      <div class="d-flex flex-column align-items-center pe-3">
+        <i
+          class="bi bi-box-arrow-up headerIcon"
+          (click)="shareCurrentPageLink()"
+        ></i>
+        <p class="text-white">Share this page</p>
+      </div>
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
@@ -36,14 +38,13 @@ mobile:  2 columns, menu logo and eol logo-->
   </div>
 </div>
 
-<!-- sidemenu 
-for desktop overlay with black shade effect
-for mobile and tablet fullscreen and show socials icon in the end (images available)
-time/close icon at first followed by the list of icons
-when hover on icons highlight the icon plus show tag (images available)-->
+<!-- sideMenu -->
 <ng-template #content let-offcanvas>
   <div class="offcanvas-body">
-    <i class="bi bi-x" (click)="offcanvas.dismiss('Cross click')"></i>
+    <i
+      class="bi bi-x headerIcon"
+      (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
+    ></i>
     <div class="container">
       <div
         *ngIf="screenWidth > 768; else elseBlock"
@@ -61,13 +62,16 @@ when hover on icons highlight the icon plus show tag (images available)-->
                 src="../../../../assets/icons/EOL_icons_desktop/{{
                   item.srcImg
                 }}"
+                height="65"
+                width="65"
                 [alt]="item.name"
                 (mouseover)="item.srcImg = item.hoverImgLink"
                 (mouseout)="item.srcImg = item.imageLink"
               />
             </ng-template>
             <ng-template #activeImage>
-              <img ngbAutoFocus
+              <img
+                ngbAutoFocus
                 class="iconImageonHover"
                 src="../../../../assets/icons/EOL_icons_desktop/{{
                   item.activeImgLink
@@ -87,53 +91,17 @@ when hover on icons highlight the icon plus show tag (images available)-->
           </div>
         </div>
         <div class="row mt-4 text-center">
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/fb icon.svg"
-              alt="facebook"
-              width="27"
-              height="27"
-            />
-          </div>
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/IG icon.svg"
-              alt="Instagram"
-              width="27"
-              height="27"
-            />
-          </div>
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/Twitter icon.svg"
-              alt="Twitter"
-              width="27"
-              height="27"
-            />
-          </div>
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/G+ icon.svg"
-              alt="Google Plus"
-              width="27"
-              height="27"
-            />
-          </div>
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/Linkedin icon.svg"
-              alt="Linkedin"
-              width="27"
-              height="27"
-            />
-          </div>
-          <div class="col-2">
-            <img
-              src="../../../../assets/icons/EOL_icons_tablet_mobile/Pinterest icon.svg"
-              alt="Pinterest"
-              width="27"
-              height="27"
-            />
+          <div *ngFor="let socialMedia of socials" class="col-2">
+            <a [href]="socialMedia.link" target="_blank">
+              <img
+                src="../../../../assets/icons/EOL_icons_tablet_mobile/{{
+                  socialMedia.src
+                }}"
+                [alt]="socialMedia.alt"
+                width="27"
+                height="27"
+              />
+            </a>
           </div>
         </div>
       </ng-template>

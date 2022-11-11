@@ -16,13 +16,13 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    NgbTooltipModule
+    NgbTooltipModule,
   ],
   exports: [
     NotFoundComponent,
     InternalServerErrorComponent,
     HeaderComponent,
-    NgbTooltipModule
+    NgbTooltipModule,
   ]
 })
 export class SharedModule { }

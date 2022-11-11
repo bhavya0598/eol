@@ -14,26 +14,45 @@
 
 body {
   height: 100vh;
+  overflow-y: hidden;
   font-family: "Lato", sans-serif;
 }
-
-// from breakpoints to the largest screen
-@include media-breakpoint-up(lg) { 
-  i{
-    font-size:60px;
-  }
- }
-
-// from smallest screen to the breakpoint
-@include media-breakpoint-down(lg) { 
-  i{
-    font-size: 30px;
-    color: var(--tablet-mobile-icon-color);
-  }
- }
  
- .sideMenu {
-  background: #000000 0% 0% no-repeat padding-box;
-  opacity: 0.4;
-  filter: blur(50px);
+.custom-sideMenu {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4) 100%,
+      rgba(0, 0, 0, 0.4) 100%
+    )
+    no-repeat padding-box;
+  box-shadow: 20px 0px 20px 20px rgb(0 0 0 / 40%);
+}
+
+// from lg to the largest screen
+@include media-breakpoint-up(lg) {
+  i {
+    font-size: 50px;
+  }
+}
+
+// from smalllest screen to md
+@include media-breakpoint-down(md) {
+  .custom-sideMenu {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 100%,
+        rgba(0, 0, 0, 0.9) 100%
+      )
+      no-repeat padding-box;
+    box-shadow: 20px 0px 20px 20px rgb(0 0 0 / 40%);
+    width: 100vw !important;
+  }
+}
+
+// from smallest screen to lg
+@include media-breakpoint-down(lg) {
+  i {
+    font-size: 30px;
+    color: var(--tablet-mobile-icon-color) !important;
+  }
 }

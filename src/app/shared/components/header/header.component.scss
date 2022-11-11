@@ -5,13 +5,33 @@ i,
 img:hover {
   cursor: pointer;
 }
-.shareIcon {
+.headerIcon {
   color: #cccccc;
 }
-.shareIcon:hover {
-  color: white;
-}
-.mobileIconsText{
+
+.mobileIconsText {
   text-decoration: none;
   color: var(--tablet-mobile-icon-color);
 }
+.custom-header {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 100%,
+      rgba(0, 0, 0, 0.5) 100%
+    )
+    no-repeat padding-box;
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  .custom-header {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .custom-header {
+    padding-top: 1.5rem
+  }
+}
+
