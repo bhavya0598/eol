@@ -1,7 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { ISoicalMedia } from 'src/app/shared/interfaces/socialMedia.interface';
-import { SocialsService } from 'src/app/shared/services/socials.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +8,8 @@ import { SocialsService } from 'src/app/shared/services/socials.service';
 })
 export class HomeComponent implements OnInit {
   videos: string[] = ['1.mp4', '2.mov', '3.mov', '4.mp4'];
-  socials: ISoicalMedia[] = [];
   constructor(
     config: NgbCarouselConfig,
-    socialMediaService: SocialsService
   ) {
     config.interval = 7000;
     config.wrap = true;
@@ -22,7 +18,6 @@ export class HomeComponent implements OnInit {
     config.showNavigationIndicators = false;
     config.showNavigationArrows = true;
     config.animation = true;
-    this.socials = socialMediaService.getSocialMedia();
   }
 
   ngOnInit(): void {}

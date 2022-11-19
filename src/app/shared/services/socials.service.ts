@@ -9,7 +9,7 @@ export class SocialsService {
     {
       alt: 'Facebook',
       link: 'https://www.facebook.com/earthoflight/',
-      src: 'fb icon.svg',      
+      src: 'fb icon.svg',
       defaultLink: 'fb icon.svg',
       hoverLink: 'fb icon hover.svg',
     },
