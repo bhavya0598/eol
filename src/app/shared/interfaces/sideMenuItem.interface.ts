@@ -6,4 +6,7 @@ export interface ISideMenuItem {
   activeImgLink: string;
   hoverImgLink: string;
   srcImg: string;
+  activeArrowLink?: string | null;
+  hoverArrowLink?: string | null;
+  showArrow: boolean
 }

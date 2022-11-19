@@ -6,12 +6,41 @@ import { ISoicalMedia } from '../interfaces/socialMedia.interface';
 })
 export class SocialsService {
   private socialMedia: ISoicalMedia[] = [
-    {alt: "Facebook", link: '', src: 'fb icon.svg'},
-    {alt: "Instagram", link: '', src: 'IG icon.svg'},
-    {alt: "Twitter", link: '', src: 'Twitter icon.svg'},
-    {alt: "GooglePlus", link: '', src: 'G+ icon.svg'},
-    {alt: "Linkedin", link: '', src: 'Linkedin icon.svg'},
-    {alt: "Pinterest", link: '', src: 'Pinterest icon.svg'},
+    {
+      alt: 'Facebook',
+      link: 'https://www.facebook.com/earthoflight/',
+      src: 'fb icon.svg',      
+      defaultLink: 'fb icon.svg',
+      hoverLink: 'fb icon hover.svg',
+    },
+    {
+      alt: 'Instagram',
+      link: 'https://www.instagram.com/earth.of.light/?hl=en',
+      src: 'IG icon.svg',
+      defaultLink: 'IG icon.svg',
+      hoverLink: 'IG icon hover.svg',
+    },
+    {
+      alt: 'Twitter',
+      link: 'https://twitter.com/EARTHofLT',
+      src: 'Twitter icon.svg',
+      defaultLink: 'Twitter icon.svg',
+      hoverLink: 'Twitter icon hover.svg',
+    },
+    {
+      alt: 'Linkedin',
+      link: 'https://www.linkedin.com/company/10024626/admin/',
+      src: 'Linkedin icon.svg',
+      defaultLink: 'Linkedin icon.svg',
+      hoverLink: 'Linkedin icon hover.svg',
+    },
+    {
+      alt: 'Pinterest',
+      link: 'https://www.pinterest.ca/justinclaudedum/',
+      src: 'Pinterest icon.svg',
+      defaultLink: 'Pinterest icon.svg',
+      hoverLink: 'Pinterest icon hover.svg',
+    },
   ];
 
   constructor() {}
@@ -20,4 +49,3 @@ export class SocialsService {
     return this.socialMedia;
   }
 }
- 

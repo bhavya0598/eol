@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102.372" height="30" viewBox="0 0 102.372 30">
+  <g id="Services_arrow" data-name="Services arrow" transform="translate(-155.735 -525)">
+    <path id="arrow" d="M-6145.265,30a2,2,0,0,1-2-2V2a2,2,0,0,1,2-2h89.636a2,2,0,0,1,2,2V28a2,2,0,0,1-2,2ZM-6156,15.507l8.735-14.139V28.633Z" transform="translate(6311.736 525)" fill="#bfaf46" opacity="0.998"/>
+    <text id="services" transform="translate(173.107 531)" font-size="15" font-family="Lato-Black, Lato Black" font-weight="800" letter-spacing="0.06em" opacity="0.901"><tspan x="0" y="15">SERVICES</tspan></text>
+  </g>
+</svg>

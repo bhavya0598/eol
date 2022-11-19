@@ -2,7 +2,6 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons.scss";
 @import "variables.scss";
 
 @font-face {
@@ -29,11 +28,11 @@ body {
 }
 
 // from lg to the largest screen
-@include media-breakpoint-up(lg) {
-  i {
-    font-size: 50px;
-  }
-}
+// @include media-breakpoint-up(lg) {
+//   i {
+//     font-size: 50px;
+//   }
+// }
 
 // from smalllest screen to md
 @include media-breakpoint-down(md) {
@@ -50,9 +49,9 @@ body {
 }
 
 // from smallest screen to lg
-@include media-breakpoint-down(lg) {
-  i {
-    font-size: 30px;
-    color: var(--tablet-mobile-icon-color) !important;
-  }
-}
+// @include media-breakpoint-down(lg) {
+//   i {
+//     font-size: 30px;
+//     color: var(--tablet-mobile-icon-color) !important;
+//   }
+// }

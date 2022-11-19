@@ -1,30 +1,37 @@
 <!-- header -->
-<div class="container-fluid fixed-top custom-header">
-  <div class="row justify-content-between align-items-center">
+<div class="container-fluid fixed-top p-4 custom-header">
+  <div class="row justify-content-around align-items-center">
     <div class="col-lg-3 col-6">
-      <i
-        class="bi bi-list ps-3 headerIcon"
+      <img
+        alt="hamburger"
+        src="../../../../assets/icons/EOL_icons_desktop/{{ hamburgerIcon }}"
         [ngClass]="menuOpened ? 'invisible' : 'visible'"
         (click)="openSideMenu(content)"
-      ></i>
+        (mouseover)="hamburgerIcon = 'nav hover.svg'"
+        (mouseout)="hamburgerIcon = 'nav collapsed.svg'"
+        class="custom-responsive-icon"
+      />
     </div>
     <div class="col-lg-6 text-center d-none d-lg-block">
       <img
         class="img-fluid"
-        src="../../../../assets/icons/EOL_icons_desktop/Logo.svg"
+        src="../../../../assets/images/Logo/Logo.png"
         alt="logo"
         (click)="routeToHome()"
         width="auto"
       />
     </div>
     <div class="col-lg-3 d-none d-lg-flex justify-content-end">
-      <div class="d-flex flex-column align-items-center pe-3">
-        <i
-          class="bi bi-box-arrow-up headerIcon"
-          (click)="shareCurrentPageLink()"
-        ></i>
-        <p class="text-white">Share this page</p>
-      </div>
+      <img
+        alt="share this page"
+        src="../../../../assets/icons/EOL_icons_desktop/{{ shareIcon }}"
+        (click)="shareCurrentPageLink()"
+        (mouseover)="shareIcon = 'share icon hover.svg'"
+        (mouseout)="shareIcon = 'share icon.svg'"
+        ngbTooltip="Share"
+        placement="bottom"
+        class="custom-responsive-icon"
+      />
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
@@ -41,17 +48,27 @@
 <!-- sideMenu -->
 <ng-template #content let-offcanvas>
   <div class="offcanvas-body">
-    <i
-      class="bi bi-x headerIcon"
-      (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
-    ></i>
-    <div class="container">
+    <div class="container py-4">
       <div
         *ngIf="screenWidth > 768; else elseBlock"
-        class="row gy-2 flex-column text-center"
+        class="row gy-4 flex-column"
       >
+        <div class="col-12">
+          <img
+            alt="cross"
+            src="../../../../assets/icons/EOL_icons_desktop/nav expanded.svg"
+            (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
+          />
+          <img
+            class="ms-2 invisible"
+            src="../../../../assets/icons/EOL_icons_desktop/about arrow hover.svg"
+          />
+        </div>
         <div *ngFor="let item of sideMenuItems" class="col-12">
-          <a [routerLink]="item.href">
+          <a
+            (click)="offcanvas.dismiss('Cross click')"
+            [routerLink]="item.href"
+          >
             <ng-container
               *ngIf="!item.isActive; then nonActiveImage; else activeImage"
             >
@@ -62,35 +79,61 @@
                 src="../../../../assets/icons/EOL_icons_desktop/{{
                   item.srcImg
                 }}"
-                height="65"
-                width="65"
+                height="60"
+                width="60"
                 [alt]="item.name"
-                (mouseover)="item.srcImg = item.hoverImgLink"
-                (mouseout)="item.srcImg = item.imageLink"
+                (mouseover)="
+                  item.srcImg = item.hoverImgLink; item.showArrow = true
+                "
+                (mouseout)="
+                  item.srcImg = item.imageLink; item.showArrow = false
+                "
+              />
+              <img
+                *ngIf="item.showArrow"
+                class="ms-2"
+                [alt]="item.name"
+                src="../../../../assets/icons/EOL_icons_desktop/{{
+                  item.hoverArrowLink
+                }}"
               />
             </ng-template>
             <ng-template #activeImage>
               <img
                 ngbAutoFocus
-                class="iconImageonHover"
+                height="60"
+                width="60"
                 src="../../../../assets/icons/EOL_icons_desktop/{{
                   item.activeImgLink
                 }}"
                 [alt]="item.name"
+              />
+              <img
+                class="ms-2"
+                [alt]="item.name"
+                src="../../../../assets/icons/EOL_icons_desktop/{{
+                  item.activeArrowLink
+                }}"
               />
             </ng-template>
           </a>
         </div>
       </div>
       <ng-template #elseBlock>
-        <div class="row gy-3 flex-column text-center">
+        <div class="row gy-4 flex-column text-center">
+          <img
+            alt="cross"
+            src="../../../../assets/icons/EOL_icons_desktop/nav expanded.svg"
+            (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
+            class="col-2 custom-responsive-icon"
+          />
           <div *ngFor="let item of sideMenuItems" class="col-12">
             <a class="mobileIconsText" [routerLink]="item.href">{{
               item.name
             }}</a>
           </div>
         </div>
-        <div class="row mt-4 text-center">
+        <div class="row mt-5 justify-content-center">
           <div *ngFor="let socialMedia of socials" class="col-2">
             <a [href]="socialMedia.link" target="_blank">
               <img
@@ -100,6 +143,8 @@
                 [alt]="socialMedia.alt"
                 width="27"
                 height="27"
+                [ngbTooltip]="socialMedia.alt"
+                placement="bottom"
               />
             </a>
           </div>

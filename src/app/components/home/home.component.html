@@ -1,8 +1,5 @@
 <!-- home page (landing page) -->
-<!-- adjust header on a coursel video playback
-for desktop height must be 100 vh and add social media icons
-for tablet and mobile 100vh with no social media as it is available on sideMenu -->
-<!-- Todo: custom icons prev and next, fitToScreen, center text, add social media on laptop screen, linear gradient on the video  -->
+<!-- Todo: custom icons prev and next -->
 <app-header></app-header>
 <ngb-carousel *ngIf="videos">
   <ng-template *ngFor="let video of videos" ngbSlide>
@@ -23,11 +20,13 @@ for tablet and mobile 100vh with no social media as it is available on sideMenu 
     </div>
   </ng-template>
 </ngb-carousel>
-<h3 class="position-absolute container custom-text">
+<!-- custom text on the carousel -->
+<h2 class="position-absolute container custom-text">
   Albeit the fact that I am love, one of the greatest ironies of life is that
   love is the greatest unknown. Thus, embodying love and embracing the unknown
   is the best, if not the only way to get to know me.
-</h3>
+</h2>
+<!-- social media icons -->
 <div class="d-none d-lg-block position-absolute custom-icons">
   <div class="d-flex">
     <div class="px-2 text-center" *ngFor="let social of socials">
@@ -35,6 +34,10 @@ for tablet and mobile 100vh with no social media as it is available on sideMenu 
         <img
           src="../../../assets/icons/EOL_icons_desktop/{{ social.src }}"
           [alt]="social.alt"
+          (mouseover)="social.src = social.hoverLink"
+          (mouseout)="social.src = social.defaultLink"
+          [ngbTooltip]="social.alt"
+          placement="bottom"
         />
       </a>
     </div>

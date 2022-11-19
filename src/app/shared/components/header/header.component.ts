@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit, TemplateRef } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  TemplateRef,
+  ViewEncapsulation,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +16,7 @@ import { ISoicalMedia } from '../../interfaces/socialMedia.interface';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
   screenWidth: number = window.innerWidth;
@@ -22,6 +29,8 @@ export class HeaderComponent implements OnInit {
   currentUrl = '/home';
   sideMenuItems: ISideMenuItem[] = [];
   socials: ISoicalMedia[] = [];
+  hamburgerIcon = 'nav collapsed.svg';
+  shareIcon = 'share icon.svg';
   constructor(
     public router: Router,
     public clipboard: Clipboard,
@@ -44,7 +53,7 @@ export class HeaderComponent implements OnInit {
     this.offcanvasService.open(content, {
       backdrop: false,
       panelClass: 'custom-sideMenu',
-      
+      position: this.screenWidth < 736 ? 'top' : 'start'
     });
     this.setActiveMenu();
   }
@@ -59,31 +68,40 @@ export class HeaderComponent implements OnInit {
   setSideMenuItems() {
     this.sideMenuItems = [
       {
-        srcImg: 'home.png',
-        imageLink: 'home.png',
-        name: 'Home',
+        srcImg: 'home.svg',
+        imageLink: 'home.svg',
+        name: 'HOME',
         href: '/home',
-        activeImgLink: 'Home.svg',
-        hoverImgLink: 'Home Hover.svg',
+        activeImgLink: 'home active.svg',
+        activeArrowLink: 'home arrow active.svg',
+        hoverArrowLink: 'home arrow hover.svg',
+        hoverImgLink: 'home hover.svg',
         isActive: false,
+        showArrow: false,
       },
       {
-        srcImg: 'about.png',
-        imageLink: 'about.png',
-        name: 'About',
+        srcImg: 'about.svg',
+        imageLink: 'about.svg',
+        name: 'ABOUT ME',
         href: '/about',
-        activeImgLink: 'About Me Onthispage.svg',
-        hoverImgLink: 'About Me Hover.svg',
+        activeImgLink: 'about active.svg',
+        hoverImgLink: 'about hover.svg',
         isActive: false,
+        activeArrowLink: 'about arrow active.svg',
+        hoverArrowLink: 'about arrow hover.svg',
+        showArrow: false,
       },
       {
-        srcImg: 'contact.png',
-        imageLink: 'contact.png',
-        name: 'Contact',
+        srcImg: 'contact.svg',
+        imageLink: 'contact.svg',
+        name: 'CONTACT',
         href: '/contact',
-        activeImgLink: 'Contact Onthispage.svg',
-        hoverImgLink: 'Contact-1.svg',
+        activeImgLink: 'contact active.svg',
+        hoverImgLink: 'contact hover.svg',
         isActive: false,
+        activeArrowLink: 'contact arrow active.svg',
+        hoverArrowLink: 'contact arrow hover.svg',
+        showArrow: false,
       },
     ];
   }

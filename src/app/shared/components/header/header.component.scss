@@ -1,10 +1,7 @@
-i:hover {
-  color: var(--tablet-mobile-icon-color);
-}
-i,
 img:hover {
   cursor: pointer;
 }
+
 .headerIcon {
   color: #cccccc;
 }
@@ -13,6 +10,11 @@ img:hover {
   text-decoration: none;
   color: var(--tablet-mobile-icon-color);
 }
+
+.bi-box-arrow-up {
+  color: white !important;
+}
+
 .custom-header {
   background: linear-gradient(
       to bottom,
@@ -27,11 +29,17 @@ img:hover {
   .custom-header {
     padding-top: 1.5rem;
   }
+  .custom-responsive-icon {
+    height: 30px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .custom-header {
-    padding-top: 1.5rem
+    padding-top: 1.5rem;
+  }
+  .custom-responsive-icon {
+    height: 30px;
+    width: 50px;
   }
 }
-

@@ -9,7 +9,7 @@ import { SocialsService } from 'src/app/shared/services/socials.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  videos: string[] = ['2.mov', '3.mov'];
+  videos: string[] = ['1.mp4', '2.mov', '3.mov', '4.mp4'];
   socials: ISoicalMedia[] = [];
   constructor(
     config: NgbCarouselConfig,
