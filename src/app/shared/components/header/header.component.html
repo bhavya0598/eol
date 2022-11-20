@@ -9,7 +9,7 @@
         (click)="openSideMenu(content)"
         (mouseover)="hamburgerIcon = 'nav hover.svg'"
         (mouseout)="hamburgerIcon = 'nav collapsed.svg'"
-        class="custom-responsive-icon"
+        class="ps-lg-5 custom-responsive-icon"
       />
     </div>
     <div class="col-lg-6 text-center d-none d-lg-block">
@@ -29,8 +29,8 @@
         (mouseover)="shareIcon = 'share icon hover.svg'"
         (mouseout)="shareIcon = 'share icon.svg'"
         ngbTooltip="Share"
-        placement="bottom"
-        class="custom-responsive-icon"
+        placement="left"
+        class="pe-lg-5 custom-responsive-icon"
       />
     </div>
     <div class="col-6 d-block d-lg-none">
@@ -128,9 +128,12 @@
             class="col-2 custom-responsive-icon"
           />
           <div *ngFor="let item of sideMenuItems" class="col-12">
-            <a class="mobileIconsText" (click)="menuOpened = false; offcanvas.dismiss('Cross click')" [routerLink]="item.href">{{
-              item.name
-            }}</a>
+            <a
+              class="mobileIconsText"
+              (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
+              [routerLink]="item.href"
+              >{{ item.name }}</a
+            >
           </div>
         </div>
         <!-- social media icons -->
