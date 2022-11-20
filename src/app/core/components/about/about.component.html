@@ -1,1 +1,18 @@
 <app-header></app-header>
+<ngb-carousel *ngIf="aboutImages">
+  <ng-template *ngFor="let image of aboutImages" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        alt="about-background-image"
+        src="../../../../assets/images/About/{{ image }}"
+      />
+    </div>
+  </ng-template>
+</ngb-carousel>
+<app-breadcrumb></app-breadcrumb>
+<div class="container position-absolute custom-block">
+  <div class="row mb-5 justify-content-center align-items-start">
+    <h1 class="col-12 text-center custom-text">About</h1>
+  </div>
+</div>
+<app-social></app-social>

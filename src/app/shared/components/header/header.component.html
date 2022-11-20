@@ -66,7 +66,7 @@
         </div>
         <div *ngFor="let item of sideMenuItems" class="col-12">
           <a
-            (click)="offcanvas.dismiss('Cross click')"
+            (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
             [routerLink]="item.href"
           >
             <ng-container
@@ -128,11 +128,12 @@
             class="col-2 custom-responsive-icon"
           />
           <div *ngFor="let item of sideMenuItems" class="col-12">
-            <a class="mobileIconsText" [routerLink]="item.href">{{
+            <a class="mobileIconsText" (click)="menuOpened = false; offcanvas.dismiss('Cross click')" [routerLink]="item.href">{{
               item.name
             }}</a>
           </div>
         </div>
+        <!-- social media icons -->
         <div class="row mt-5 justify-content-center">
           <div *ngFor="let socialMedia of socials" class="col-2">
             <a [href]="socialMedia.link" target="_blank">

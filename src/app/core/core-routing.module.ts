@@ -6,6 +6,11 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/home',
+  },
+  {
     path: 'home',
     component: HomeComponent,
   },
@@ -19,8 +24,11 @@ const routes: Routes = [
   },
   {
     path: 'services',
-    loadChildren: () => import('./modules/eol-services/eol-services.module').then(m=>m.EolServicesModule)
-  }
+    loadChildren: () =>
+      import('./modules/eol-services/eol-services.module').then(
+        (m) => m.EolServicesModule
+      ),
+  },
 ];
 
 @NgModule({

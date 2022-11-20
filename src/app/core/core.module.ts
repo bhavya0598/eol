@@ -4,7 +4,7 @@ import { CoreRoutingModule } from './core-routing.module';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../../shared.module';
 
 @NgModule({
   declarations: [HomeComponent, ContactComponent, AboutComponent],

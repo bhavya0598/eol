@@ -1,1 +1,44 @@
 <app-header></app-header>
+<ngb-carousel *ngIf="contactImages">
+  <ng-template *ngFor="let image of contactImages" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        alt="contact-background-image"
+        src="../../../../assets/images/Contact/{{ image }}"
+      />
+    </div>
+  </ng-template>
+</ngb-carousel>
+<app-breadcrumb></app-breadcrumb>
+<div class="container position-absolute custom-block">
+  <div class="row mb-5 justify-content-center align-items-start">
+    <h1 class="col-12 text-center custom-text">Contact</h1>
+    <div class="col-6 col-lg-4 text-end custom-content">
+      Earth of Light Therapeutic Services <br />
+      50 Lincoln Park, Unit 201 Canmore, <br />
+      AB T1W 3E9
+    </div>
+    <div class="col-6 col-lg-4 text-start custom-content">
+      office: (825) 333-6699 <br />
+      fax: (825) 909-9214 <br />
+      email: info@earthoflight.com
+    </div>
+  </div>
+  <hr class="custom-line" />
+  <div class="row my-4">
+    <div
+      class="col-lg-2 text-center"
+      *ngFor="let contactDetail of contactDetails"
+    >
+      <img
+        [alt]="contactDetail.alt"
+        src="../../../../assets/icons/EOL_icons_desktop/{{ contactDetail.src }}"
+        [ngbTooltip]="contactDetail.alt"
+        placement="bottom"
+      />
+      <p class="custom-content">{{ contactDetail.alt }}</p>
+    </div>
+  </div>
+  <hr class="custom-line" />
+</div>
+<app-social></app-social>

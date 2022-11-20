@@ -9,14 +9,8 @@
   width: 80%;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: black;
-  opacity: 0.6;
+video {
+  filter: brightness(40%);
 }
 
 img:hover {
