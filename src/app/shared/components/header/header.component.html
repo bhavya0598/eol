@@ -50,18 +50,16 @@
   <div class="offcanvas-body">
     <div class="container py-4">
       <div
-        *ngIf="screenWidth > 768; else elseBlock"
+        *ngIf="screenWidth >= 768; else elseBlock"
         class="row gy-4 flex-column"
       >
         <div class="col-12">
           <img
+            height="40"
+            width="60"
             alt="cross"
             src="../../../../assets/icons/EOL_icons_desktop/nav expanded.svg"
             (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
-          />
-          <img
-            class="ms-2 invisible"
-            src="../../../../assets/icons/EOL_icons_desktop/about arrow hover.svg"
           />
         </div>
         <div *ngFor="let item of sideMenuItems" class="col-12">

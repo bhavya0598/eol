@@ -16,7 +16,23 @@ body {
   overflow-y: hidden;
   font-family: "Lato", sans-serif;
 }
- 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--tablet-mobile-icon-color);
+  border-radius: 10px;
+}
+
 .custom-sideMenu {
   background: linear-gradient(
       to right,
