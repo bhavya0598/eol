@@ -7,10 +7,27 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  videos: string[] = ['1.mp4', '2.mov', '3.mov', '4.mp4'];
-  constructor(
-    config: NgbCarouselConfig,
-  ) {
+  videos: { name: string; text: string }[] = [
+    {
+      name: '1.mp4',
+      text: `Albeit the fact that I am love, one of the greatest ironies of life is that
+              love is the greatest unknown. Thus, embodying love and embracing the unknown
+              is the best, if not the only way to get to know me.`,
+    },
+    {
+      name: '2.mov',
+      text: `Just as much as meditation is the original medicine, nature is the first physician.`,
+    },
+    {
+      name: '3.mov',
+      text: `Truth is timeless and alchemical: It induces spontaneous transformation and triggers exponential growth whenever it is encountered.`,
+    },
+    {
+      name: '4.mp4',
+      text: `The greatest gift that one can give is the light of awareness.`,
+    },
+  ];
+  constructor(config: NgbCarouselConfig) {
     config.interval = 7000;
     config.wrap = true;
     config.keyboard = false;

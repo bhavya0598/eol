@@ -1,10 +1,9 @@
 <!-- home page (landing page) -->
 <!-- Todo: custom icons prev and next -->
 <app-header></app-header>
-<ngb-carousel *ngIf="videos">
+<ngb-carousel class="position-static" *ngIf="videos">
   <ng-template *ngFor="let video of videos" ngbSlide>
     <div class="picsum-img-wrapper">
-      <div class="overlay"></div>
       <video
         loop
         muted
@@ -13,18 +12,14 @@
         onloadedmetadata="this.muted = true"
       >
         <source
-          src="../../../assets/videos/home/{{ video }}"
+          src="../../../assets/videos/home/{{ video.name }}"
           type="video/mp4"
         />
       </video>
     </div>
+    <div class="carousel-caption">
+      <h2>{{ video.text }}</h2>
+    </div>
   </ng-template>
 </ngb-carousel>
-<!-- custom text on the carousel -->
-<h2 class="position-absolute container custom-text">
-  Albeit the fact that I am love, one of the greatest ironies of life is that
-  love is the greatest unknown. Thus, embodying love and embracing the unknown
-  is the best, if not the only way to get to know me.
-</h2>
 <app-social></app-social>
-
