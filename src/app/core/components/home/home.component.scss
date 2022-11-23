@@ -1,9 +1,26 @@
+.custom-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .carousel-caption {
   letter-spacing: 0.68px;
-  text-align: center;
   color: #d8d8d8;
   text-shadow: 0px 3px 6px #000000e8;
-  top: 45vh;
+  display: table;
+  position: fixed;
+  height: 100%;
+}
+
+.mid-div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.center-div {
+  margin: 0 auto;
 }
 
 video {
@@ -15,9 +32,6 @@ img:hover {
 }
 
 @media (max-width: 767.98px) {
-  .carousel-caption {
-    top: 35vh;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
