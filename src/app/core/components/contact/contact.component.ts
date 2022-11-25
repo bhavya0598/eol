@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
     this.screenWidth = window.innerWidth;
   }
   contactDetails: IContact[] = [
-    { alt: 'Email info@earthoflight.com', src: 'email/email.png' },
+    { alt: 'Email', src: 'email/email.png' },
     { alt: 'Phone', src: 'Phone/Phone.png' },
     { alt: 'Map', src: 'map/map.png' },
     { alt: 'Skype', src: 'skype/skype.png' },

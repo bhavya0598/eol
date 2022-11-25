@@ -6,14 +6,14 @@
 />
 <app-breadcrumb></app-breadcrumb>
 <div class="container custom-block">
-  <div class="row mb-3 mb-lg-5 justify-content-center align-items-start">
+  <div class="row mb-3 mb-md-5 justify-content-center align-items-start">
     <h1 class="col-12 text-center custom-text">Contact</h1>
-    <div class="col-12 col-lg-4 text-end custom-content">
+    <div class="col-12 col-md-6 text-end custom-content">
       Earth of Light Therapeutic Services <br />
       50 Lincoln Park, Unit 201 Canmore, <br />
       AB T1W 3E9
     </div>
-    <div class="col-12 col-lg-4 text-start custom-content">
+    <div class="col-12 col-md-6 text-start custom-content">
       office: (825) 333-6699 <br />
       fax: (825) 909-9214 <br />
       email: info@earthoflight.com
@@ -22,7 +22,7 @@
   <hr class="custom-line" />
   <div class="row gy-3 my-4">
     <div
-      class="col-6 col-lg-2 text-center"
+      class="col-6 col-md-4 col-lg-2 text-center"
       *ngFor="let contactDetail of contactDetails"
     >
       <img
@@ -32,6 +32,7 @@
       />
       <p
         *ngIf="
+          contactDetail.alt != 'Email' &&
           contactDetail.alt != 'Phone' &&
           contactDetail.alt != 'WhatsApp' &&
           contactDetail.alt != 'Skype'
@@ -39,6 +40,9 @@
         class="custom-content"
       >
         {{ contactDetail.alt }}
+      </p>
+      <p *ngIf="contactDetail.alt == 'Email'" class="custom-content">
+        {{ contactDetail.alt }} <br />info@earthoflight.com
       </p>
       <p *ngIf="contactDetail.alt == 'Phone'" class="custom-content">
         {{ contactDetail.alt }} <br />(825) 333-6699
