@@ -1,4 +1,5 @@
 .custom-icons {
+  position: absolute;
   left: 50%;
   bottom: 0%;
   transform: translate(-50%, -50%);
@@ -10,5 +11,12 @@
 @media (max-width: 767.98px) {
   .custom-icons img {
     width: 2.5rem;
+  }
+  .custom-icons {
+    transform: none;
+    position: initial;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0px;
   }
 }

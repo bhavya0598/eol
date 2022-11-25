@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Lavato";
+  src: url(assets/fonts/Lovato-Light.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   height: 100vh;
   overflow-y: hidden;
@@ -50,6 +57,14 @@ body {
 //     font-size: 50px;
 //   }
 // }
+
+// only for smallest screen
+@include media-breakpoint-down(sm) {
+  body {
+    height: auto;
+    overflow-y: scroll;
+  }
+}
 
 // from smalllest screen to md
 @include media-breakpoint-down(md) {

@@ -20,16 +20,23 @@ import { ISoicalMedia } from '../../interfaces/socialMedia.interface';
 })
 export class HeaderComponent implements OnInit {
   screenWidth: number = window.innerWidth;
+  hamburgerIcon: string =
+    this.screenWidth > 767.98
+      ? 'nav collapsed.svg'
+      : 'nav collapsed golden.svg';
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
+    this.hamburgerIcon =
+      this.screenWidth > 767.98
+        ? 'nav collapsed.svg'
+        : 'nav collapsed golden.svg';
   }
   isCopied = false;
   menuOpened: boolean = false;
   currentUrl = '/home';
   sideMenuItems: ISideMenuItem[] = [];
   socials: ISoicalMedia[] = [];
-  hamburgerIcon = 'nav collapsed.svg';
   shareIcon = 'share icon.svg';
   constructor(
     public router: Router,

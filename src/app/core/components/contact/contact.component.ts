@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { IContact } from 'src/app/shared/interfaces/contact.interface';
 
@@ -8,13 +8,18 @@ import { IContact } from 'src/app/shared/interfaces/contact.interface';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  contactImages = ['contact.png'];
+  contactImage = 'contact.png';
+  screenWidth: number = window.innerWidth;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
+  }
   contactDetails: IContact[] = [
-    { alt: 'Email', src: 'email/email.png' },
+    { alt: 'Email info@earthoflight.com', src: 'email/email.png' },
     { alt: 'Phone', src: 'Phone/Phone.png' },
     { alt: 'Map', src: 'map/map.png' },
     { alt: 'Skype', src: 'skype/skype.png' },
-    { alt: 'Whatsapp', src: 'WhatsApp/WhatsApp.png' },
+    { alt: 'WhatsApp', src: 'WhatsApp/WhatsApp.png' },
     { alt: 'Zoom', src: 'Zoom/Zoom.png' },
   ];
   constructor(config: NgbCarouselConfig) {

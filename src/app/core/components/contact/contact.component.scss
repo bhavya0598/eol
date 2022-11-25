@@ -1,21 +1,31 @@
-.picsum-img-wrapper img {
+.custom-image {
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
   filter: brightness(40%);
 }
 
 .custom-block {
+  position: absolute;
   top: 25%;
   right: 0px;
   left: 0px;
   padding: 0px 4rem;
+  overflow-y: scroll;
 }
 
 .custom-text {
   color: var(--primary-color-for-page-header);
   letter-spacing: 1.6px;
+  font-family: "Lavato", sans-serif;
+  font-size: 80px;
 }
 
 .custom-content {
   color: #d8d8d8;
+  line-height: 21pt;
 }
 
 .custom-line {
@@ -23,9 +33,23 @@
 }
 
 @media (max-width: 767.98px) {
+  .custom-text{
+    font-size: 40px;
+  }
+  .custom-image {
+    left: -529px;
+  }
   .custom-block {
     top: 20%;
     padding: 0px 1rem;
+  }
+  .custom-content {
+    text-align: center !important;
+    margin: 1rem 0px;
+  }
+  .custom-contactDetailsIcons {
+    height: 80px;
+    width: 80px;
   }
 }
 
