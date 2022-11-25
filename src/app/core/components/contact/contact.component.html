@@ -7,13 +7,13 @@
 <app-breadcrumb></app-breadcrumb>
 <div class="container custom-block">
   <div class="row mb-3 mb-md-5 justify-content-center align-items-start">
-    <h1 class="col-12 text-center custom-text">Contact</h1>
-    <div class="col-12 col-md-6 text-end custom-content">
+    <h1 class="col-12 pb-md-4 pb-lg-5 text-center custom-text">Contact</h1>
+    <div class="col-12 col-md-6 pe-md-5 text-end custom-content">
       Earth of Light Therapeutic Services <br />
-      50 Lincoln Park, Unit 201 Canmore, <br />
-      AB T1W 3E9
+      Suite 207B - 1205 Bow Valley Trail Canmore, Alberta <br />
+      T1W 1P5
     </div>
-    <div class="col-12 col-md-6 text-start custom-content">
+    <div class="col-12 col-md-6 ps-md-5 text-start custom-content vl">
       office: (825) 333-6699 <br />
       fax: (825) 909-9214 <br />
       email: info@earthoflight.com
@@ -25,34 +25,21 @@
       class="col-6 col-md-4 col-lg-2 text-center"
       *ngFor="let contactDetail of contactDetails"
     >
-      <img
-        [alt]="contactDetail.alt"
-        src="../../../../assets/icons/EOL_icons_desktop/{{ contactDetail.src }}"
-        class="custom-contactDetailsIcons"
-      />
-      <p
-        *ngIf="
-          contactDetail.alt != 'Email' &&
-          contactDetail.alt != 'Phone' &&
-          contactDetail.alt != 'WhatsApp' &&
-          contactDetail.alt != 'Skype'
-        "
-        class="custom-content"
-      >
-        {{ contactDetail.alt }}
-      </p>
-      <p *ngIf="contactDetail.alt == 'Email'" class="custom-content">
-        {{ contactDetail.alt }} <br />info@earthoflight.com
-      </p>
-      <p *ngIf="contactDetail.alt == 'Phone'" class="custom-content">
-        {{ contactDetail.alt }} <br />(825) 333-6699
-      </p>
-      <p *ngIf="contactDetail.alt == 'WhatsApp'" class="custom-content">
-        {{ contactDetail.alt }} <br />(780) 907-8899
-      </p>
-      <p *ngIf="contactDetail.alt == 'Skype'" class="custom-content">
-        {{ contactDetail.alt }} <br />earthoflight
-      </p>
+      <a [href]="contactDetail.link" target="_blank">
+        <img
+          [alt]="contactDetail.alt"
+          src="../../../../assets/icons/EOL_icons_desktop/{{
+            contactDetail.src
+          }}"
+          class="custom-contactDetailsIcons"
+        />
+        <p class="custom-content m-0 pt-2">
+          {{ contactDetail.alt }}
+        </p>
+        <p class="custom-content">
+          {{ contactDetail.additionalText }}
+        </p>
+      </a>
     </div>
   </div>
   <hr class="custom-line" />
