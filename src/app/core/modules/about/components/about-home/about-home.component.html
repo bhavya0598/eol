@@ -1,0 +1,43 @@
+<app-header></app-header>
+<img
+  class="custom-image"
+  alt="contact-background-image"
+  src="../../../../assets/images/{{ aboutImage }}"
+/>
+<div class="container custom-block">
+  <div class="row mb-3 mb-md-5 justify-content-center align-items-start">
+    <h1 class="col-12 pb-md-4 pb-lg-5 text-center custom-text">About Me</h1>
+    <!-- <div class="col-12 col-md-6 pe-md-5 text-end custom-content">
+        Earth of Light Therapeutic Services <br />
+        Suite 207B - 1205 Bow Valley Trail Canmore, Alberta <br />
+        T1W 1P5
+      </div>
+      <div class="col-12 col-md-6 ps-md-5 text-start custom-content vl">
+        office: (825) 333-6699 <br />
+        fax: (825) 909-9214 <br />
+        email: info@earthoflight.com
+      </div> -->
+  </div>
+  <hr class="custom-line" />
+  <div class="row gy-3 my-4 text-center">
+    <div
+      class="col"
+      *ngFor="let aboutDetail of aboutDetails"
+    >
+      <a [routerLink]="aboutDetail.route">
+        <img
+          [alt]="aboutDetail.alt"
+          src="../../../../assets/icons/EOL_icons_desktop/{{ aboutDetail.src }}"
+          class="custom-icons"
+        />
+        <p class="custom-content m-0 pt-2">
+          {{ aboutDetail.alt }}
+        </p>
+      </a>
+    </div>
+  </div>
+  <hr class="custom-line" />
+  <app-social *ngIf="screenWidth < 767.98"></app-social>
+</div>
+<app-breadcrumb></app-breadcrumb>
+<app-social *ngIf="screenWidth >= 767.98"></app-social>
