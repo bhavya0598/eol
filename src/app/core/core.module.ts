@@ -4,9 +4,10 @@ import { CoreRoutingModule } from './core-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from '../../../shared.module';
+import { BookComponent } from './components/book/book.component';
 
 @NgModule({
-  declarations: [HomeComponent, ContactComponent],
+  declarations: [HomeComponent, ContactComponent, BookComponent],
   imports: [CommonModule, CoreRoutingModule, SharedModule],
   exports: [],
 })

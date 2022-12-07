@@ -21,17 +21,21 @@
         width="auto"
       />
     </div>
-    <div class="col-lg-3 d-none d-lg-flex justify-content-end">
+    <div class="pe-lg-5 col-lg-3 d-none flex-column d-lg-flex justify-content-center align-items-end">
       <img
-        alt="share this page"
+        alt="share"
         src="../../../../assets/icons/EOL_icons_desktop/{{ shareIcon }}"
-        (click)="shareCurrentPageLink()"
+        (click)="shareCurrentPageLink();"
         (mouseover)="shareIcon = 'share icon hover.svg'"
         (mouseout)="shareIcon = 'share icon.svg'"
-        ngbTooltip="Share"
-        placement="left"
-        class="pe-lg-5 custom-responsive-icon"
+        class="custom-responsive-icon"
+        height="70"
+        ngbTooltip="Link copied!"
+        triggers="click:blur"
+        placement="bottom"
+        [autoClose]="true"
       />
+      <span class="mt-2 pe-1 custom-text">Share</span>
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
