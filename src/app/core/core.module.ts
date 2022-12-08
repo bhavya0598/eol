@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -8,7 +8,7 @@ import { BookComponent } from './components/book/book.component';
 
 @NgModule({
   declarations: [HomeComponent, ContactComponent, BookComponent],
-  imports: [CommonModule, CoreRoutingModule, SharedModule],
+  imports: [CommonModule, CoreRoutingModule, SharedModule, NgOptimizedImage],
   exports: [],
 })
 export class CoreModule {}

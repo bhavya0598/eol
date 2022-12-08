@@ -3,6 +3,7 @@
   <div class="row justify-content-around align-items-center">
     <div class="col-lg-3 col-6">
       <img
+        loading="lazy"
         alt="hamburger"
         src="../../../../assets/icons/EOL_icons_desktop/{{ hamburgerIcon }}"
         [ngClass]="menuOpened ? 'invisible' : 'visible'"
@@ -14,6 +15,7 @@
     </div>
     <div class="col-lg-6 text-center d-none d-lg-block">
       <img
+        loading="lazy"
         class="img-fluid"
         src="../../../../assets/images/Logo/Logo.png"
         alt="logo"
@@ -21,11 +23,14 @@
         width="auto"
       />
     </div>
-    <div class="pe-lg-5 col-lg-3 d-none flex-column d-lg-flex justify-content-center align-items-end">
+    <div
+      class="pe-lg-5 col-lg-3 d-none flex-column d-lg-flex justify-content-center align-items-end"
+    >
       <img
+        loading="lazy"
         alt="share"
         src="../../../../assets/icons/EOL_icons_desktop/{{ shareIcon }}"
-        (click)="shareCurrentPageLink();"
+        (click)="shareCurrentPageLink()"
         (mouseover)="shareIcon = 'share icon hover.svg'"
         (mouseout)="shareIcon = 'share icon.svg'"
         class="custom-responsive-icon"
@@ -39,6 +44,7 @@
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
+        loading="lazy"
         class="img-fluid float-end pe-3"
         src="../../../../assets/icons/EOL_icons_tablet_mobile/Logo.svg"
         alt="logo"
@@ -59,6 +65,7 @@
       >
         <div class="col-12">
           <img
+            loading="lazy"
             height="40"
             width="60"
             alt="cross"
@@ -77,6 +84,7 @@
             </ng-container>
             <ng-template #nonActiveImage>
               <img
+                loading="lazy"
                 class="iconImageOnHover"
                 src="../../../../assets/icons/EOL_icons_desktop/{{
                   item.srcImg
@@ -92,6 +100,7 @@
                 "
               />
               <img
+                loading="lazy"
                 *ngIf="item.showArrow"
                 class="ms-2"
                 [alt]="item.name"
@@ -102,6 +111,7 @@
             </ng-template>
             <ng-template #activeImage>
               <img
+                loading="lazy"
                 ngbAutoFocus
                 height="60"
                 width="60"
@@ -111,6 +121,7 @@
                 [alt]="item.name"
               />
               <img
+                loading="lazy"
                 class="ms-2"
                 [alt]="item.name"
                 src="../../../../assets/icons/EOL_icons_desktop/{{
@@ -124,6 +135,7 @@
       <ng-template #elseBlock>
         <div class="row gy-4 flex-column text-center">
           <img
+            loading="lazy"
             alt="cross"
             src="../../../../assets/icons/EOL_icons_desktop/nav expanded.svg"
             (click)="menuOpened = false; offcanvas.dismiss('Cross click')"
@@ -142,7 +154,7 @@
         <div class="row mt-5 justify-content-center">
           <div *ngFor="let socialMedia of socials" class="col-2">
             <a [href]="socialMedia.link" target="_blank">
-              <img
+              <img loading="lazy"
                 src="../../../../assets/icons/EOL_icons_tablet_mobile/{{
                   socialMedia.src
                 }}"

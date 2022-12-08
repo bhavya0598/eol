@@ -1,5 +1,6 @@
 <app-header></app-header>
 <img
+  loading="lazy"
   class="custom-image"
   alt="contact-background-image"
   src="../../../../assets/images/{{ aboutImage }}"
@@ -20,12 +21,10 @@
   </div>
   <hr class="custom-line" />
   <div class="row gy-3 my-4 text-center">
-    <div
-      class="col"
-      *ngFor="let aboutDetail of aboutDetails"
-    >
+    <div class="col" *ngFor="let aboutDetail of aboutDetails">
       <a [routerLink]="aboutDetail.route">
         <img
+          loading="lazy"
           [alt]="aboutDetail.alt"
           src="../../../../assets/icons/EOL_icons_desktop/{{ aboutDetail.src }}"
           class="custom-icons"

@@ -1,5 +1,6 @@
 <app-header></app-header>
 <img
+  loading="lazy"
   class="custom-image"
   alt="contact-background-image"
   src="../../../../assets/images/{{ contactImage }}"
@@ -30,6 +31,7 @@
     >
       <a [href]="contactDetail.link" target="_blank">
         <img
+          loading="lazy"
           [alt]="contactDetail.alt"
           src="../../../../assets/icons/EOL_icons_desktop/{{
             contactDetail.src
@@ -53,6 +55,7 @@
     >
       <a [href]="contactDetail.link" target="_blank">
         <img
+          loading="lazy"
           [alt]="contactDetail.alt"
           src="../../../../assets/icons/EOL_icons_desktop/{{
             contactDetail.src
