@@ -6,8 +6,8 @@
 />
 <app-breadcrumb></app-breadcrumb>
 <div class="container custom-block">
-  <div class="row mb-3 mb-md-5 justify-content-center align-items-start">
-    <h1 class="col-12 pb-md-4 pb-lg-5 text-center custom-text">Contact</h1>
+  <div class="row mb-md-5 justify-content-center align-items-start">
+    <h1 class="col-12 pb-md-4 pb-lg-3 text-center custom-text">Contact</h1>
     <div class="col-12 col-md-6 pe-md-5 text-end custom-content">
       Earth of Light Therapeutic Services <br />
       Suite 207B - 1205 Bow Valley Trail Canmore, Alberta <br />
@@ -20,10 +20,13 @@
     </div>
   </div>
   <hr class="custom-line" />
-  <div class="row gy-3 my-4">
+  <div class="row justify-content-center">
     <div
-      class="col-6 col-md-4 col-lg-2 text-center"
-      *ngFor="let contactDetail of contactDetails"
+      class="col-6 my-2 col-md-2 col-lg-2 text-center"
+      *ngFor="
+        let contactDetail of contactDetails
+          | slice : 0 : (screenWidth >= 767.98 ? 5 : 10)
+      "
     >
       <a [href]="contactDetail.link" target="_blank">
         <img
@@ -32,6 +35,30 @@
             contactDetail.src
           }}"
           class="custom-icons"
+          height="70"
+        />
+        <p class="custom-content m-0 pt-2">
+          {{ contactDetail.alt }}
+        </p>
+        <p class="custom-content">
+          {{ contactDetail.additionalText }}
+        </p>
+      </a>
+    </div>
+  </div>
+  <div *ngIf="screenWidth >= 767.98" class="row justify-content-center">
+    <div
+      class="col-6 col-md-2 col-lg-2 text-center"
+      *ngFor="let contactDetail of contactDetails | slice : 5 : 10"
+    >
+      <a [href]="contactDetail.link" target="_blank">
+        <img
+          [alt]="contactDetail.alt"
+          src="../../../../assets/icons/EOL_icons_desktop/{{
+            contactDetail.src
+          }}"
+          class="custom-icons"
+          height="70"
         />
         <p class="custom-content m-0 pt-2">
           {{ contactDetail.alt }}
