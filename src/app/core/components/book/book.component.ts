@@ -19,7 +19,7 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       if (this.count != 0) this.count--;
-      // else this.onClick();
+      else this.onClick();
     }, 1000);
   }
   onClick() {
