@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
               is the best, if not the only way to get to know me.`,
     },
     {
-      name: '2.mov',
+      name: '2.mp4',
       text: `Just as much as meditation is the original medicine, nature is the first physician.`,
     },
     {
-      name: '3.mov',
+      name: '3.mp4',
       text: `Truth is timeless and alchemical: It induces spontaneous transformation and triggers exponential growth whenever it is encountered.`,
     },
     {
