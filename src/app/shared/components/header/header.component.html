@@ -9,9 +9,8 @@
         [ngClass]="menuOpened ? 'invisible' : 'visible'"
         (click)="openSideMenu(content)"
         (mouseover)="hamburgerIcon = 'nav hover.svg'"
-        (mouseout)="hamburgerIcon = 'nav collapsed.svg'"
-        class="ps-lg-5 custom-responsive-icon"
-        [width]="hamburgerIcon == 'nav collapsed.svg' ? 90 : 110"
+        (mouseout)="hamburgerIcon = screenWidth > 767.98 ? 'nav collapsed.svg' : 'nav collapsed golden.svg'"
+        class="ps-lg-5 custom-responsive-icon hamburgerSize"
       />
     </div>
     <div class="col-lg-6 text-center d-none d-lg-block">
@@ -42,7 +41,7 @@
         [autoClose]="true"
         width="40"
       />
-      <p class="mt-2 custom-text">Share</p>
+      <span class="custom-text">Share</span>
     </div>
     <div class="col-6 d-block d-lg-none">
       <img

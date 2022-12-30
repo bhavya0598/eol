@@ -23,7 +23,9 @@ img:hover {
 .mobileIconsText:hover {
   text-decoration: underline;
 }
-
+.hamburgerSize {
+  width: 100px;
+}
 @media (max-width: 767.98px) {
   .custom-header {
     padding-top: 1.5rem;
