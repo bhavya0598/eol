@@ -11,6 +11,7 @@
         (mouseover)="hamburgerIcon = 'nav hover.svg'"
         (mouseout)="hamburgerIcon = 'nav collapsed.svg'"
         class="ps-lg-5 custom-responsive-icon"
+        [width]="hamburgerIcon == 'nav collapsed.svg' ? 90 : 110"
       />
     </div>
     <div class="col-lg-6 text-center d-none d-lg-block">
@@ -39,8 +40,9 @@
         triggers="click:blur"
         placement="bottom"
         [autoClose]="true"
+        width="40"
       />
-      <span class="mt-2 pe-1 custom-text">Share</span>
+      <p class="mt-2 custom-text">Share</p>
     </div>
     <div class="col-6 d-block d-lg-none">
       <img
