@@ -7,7 +7,7 @@ import { IContact } from 'src/app/shared/interfaces/contact.interface';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  contactImage = 'contact/contact.png';
+  contactImage = 'contact/contact.jpg';
   screenWidth: number = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -76,6 +76,5 @@ export class ContactComponent implements OnInit {
     },
   ];
   constructor() {}
-
   ngOnInit(): void {}
 }
