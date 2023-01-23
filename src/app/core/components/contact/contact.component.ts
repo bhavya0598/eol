@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { LoadContentService } from 'src/app/shared/services/load-content.service';
 import { IContact } from 'src/app/shared/interfaces/contact.interface';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +9,8 @@ import { IContact } from 'src/app/shared/interfaces/contact.interface';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  contactImage = 'contact/contact.jpg';
+  src: SafeUrl = '';
+  imageLoaded: boolean = false;
   screenWidth: number = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -75,6 +78,19 @@ export class ContactComponent implements OnInit {
       link: 'https://telegram.me/earthoflight',
     },
   ];
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(
+    private loadContent: LoadContentService,
+    private sanitizer: DomSanitizer
+  ) {}
+  ngOnInit(): void {
+    this.src = this.loadContent
+      .getContent('assets/images/contact/', 'contact.jpg')
+      .subscribe((data) => {
+        this.src = this.sanitizer.bypassSecurityTrustUrl(
+          URL.createObjectURL(data)
+        );
+        URL.revokeObjectURL(<string>this.src);
+        if (this.src != '') this.imageLoaded = true;
+      });
+  }
 }

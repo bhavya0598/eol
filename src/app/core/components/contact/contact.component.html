@@ -1,80 +1,82 @@
-<app-header></app-header>
-<img
-  loading="eager"
-  class="custom-image"
-  alt="contact-background-image"
-  src="../../../../assets/images/{{ contactImage }}"
-/>
-<!-- <app-breadcrumb></app-breadcrumb> -->
-<div class="container custom-block">
-  <div class="row justify-content-center align-items-start">
-    <h1 class="col-12 pb-md-4 pb-lg-3 text-center custom-text">Contact</h1>
-    <div class="col-12 col-md-6 pe-md-5 text-end custom-content">
-      Earth of Light Therapeutic Services <br />
-      Suite 207B - 1205 Bow Valley Trail Canmore, Alberta <br />
-      T1W 1P5
+<ng-container *ngIf="imageLoaded">
+  <app-header></app-header>
+  <img
+    loading="eager"
+    class="custom-image"
+    alt="contact-background-image"
+    [src]="src"
+  />
+  <!-- <app-breadcrumb></app-breadcrumb> -->
+  <div class="container custom-block">
+    <div class="row justify-content-center align-items-start">
+      <h1 class="col-12 pb-md-4 pb-lg-3 text-center custom-text">Contact</h1>
+      <div class="col-12 col-md-6 pe-md-5 text-end custom-content">
+        Earth of Light Therapeutic Services <br />
+        Suite 207B - 1205 Bow Valley Trail Canmore, Alberta <br />
+        T1W 1P5
+      </div>
+      <div class="col-12 col-md-6 ps-md-5 text-start custom-content vl">
+        office: (825) 333-6699 <br />
+        fax: (825) 909-9214 <br />
+        email: info@earthoflight.com
+      </div>
     </div>
-    <div class="col-12 col-md-6 ps-md-5 text-start custom-content vl">
-      office: (825) 333-6699 <br />
-      fax: (825) 909-9214 <br />
-      email: info@earthoflight.com
+    <hr class="custom-line" />
+    <div class="row justify-content-center">
+      <div
+        class="col-6 col-md-2 col-lg-2 text-center"
+        *ngFor="
+          let contactDetail of contactDetails
+            | slice : 0 : (screenWidth >= 767.98 ? 5 : 10)
+        "
+      >
+        <a [href]="contactDetail.link" target="_blank">
+          <img
+            loading="lazy"
+            [alt]="contactDetail.alt"
+            src="../../../../assets/icons/EOL_icons_desktop/{{
+              contactDetail.src
+            }}"
+            class="custom-icons"
+            height="60"
+            width="60"
+          />
+          <p class="custom-content m-0 pt-2">
+            {{ contactDetail.alt }}
+          </p>
+          <p class="custom-content">
+            {{ contactDetail.additionalText }}
+          </p>
+        </a>
+      </div>
     </div>
+    <div *ngIf="screenWidth >= 767.98" class="row justify-content-center">
+      <div
+        class="col-6 col-md-2 col-lg-2 text-center"
+        *ngFor="let contactDetail of contactDetails | slice : 5 : 10"
+      >
+        <a [href]="contactDetail.link" target="_blank">
+          <img
+            loading="lazy"
+            [alt]="contactDetail.alt"
+            src="../../../../assets/icons/EOL_icons_desktop/{{
+              contactDetail.src
+            }}"
+            class="custom-icons"
+            height="60"
+            width="60"
+          />
+          <p class="custom-content m-0 pt-2">
+            {{ contactDetail.alt }}
+          </p>
+          <p class="custom-content">
+            {{ contactDetail.additionalText }}
+          </p>
+        </a>
+      </div>
+    </div>
+    <hr class="custom-line" />
+    <!-- <app-social *ngIf="screenWidth < 767.98"></app-social> -->
   </div>
-  <hr class="custom-line" />
-  <div class="row justify-content-center">
-    <div
-      class="col-6 col-md-2 col-lg-2 text-center"
-      *ngFor="
-        let contactDetail of contactDetails
-          | slice : 0 : (screenWidth >= 767.98 ? 5 : 10)
-      "
-    >
-      <a [href]="contactDetail.link" target="_blank">
-        <img
-          loading="lazy"
-          [alt]="contactDetail.alt"
-          src="../../../../assets/icons/EOL_icons_desktop/{{
-            contactDetail.src
-          }}"
-          class="custom-icons"
-          height="60"
-          width="60"
-        />
-        <p class="custom-content m-0 pt-2">
-          {{ contactDetail.alt }}
-        </p>
-        <p class="custom-content">
-          {{ contactDetail.additionalText }}
-        </p>
-      </a>
-    </div>
-  </div>
-  <div *ngIf="screenWidth >= 767.98" class="row justify-content-center">
-    <div
-      class="col-6 col-md-2 col-lg-2 text-center"
-      *ngFor="let contactDetail of contactDetails | slice : 5 : 10"
-    >
-      <a [href]="contactDetail.link" target="_blank">
-        <img
-          loading="lazy"
-          [alt]="contactDetail.alt"
-          src="../../../../assets/icons/EOL_icons_desktop/{{
-            contactDetail.src
-          }}"
-          class="custom-icons"
-          height="60"
-          width="60"
-        />
-        <p class="custom-content m-0 pt-2">
-          {{ contactDetail.alt }}
-        </p>
-        <p class="custom-content">
-          {{ contactDetail.additionalText }}
-        </p>
-      </a>
-    </div>
-  </div>
-  <hr class="custom-line" />
-  <!-- <app-social *ngIf="screenWidth < 767.98"></app-social> -->
-</div>
-<!-- <app-social *ngIf="screenWidth >= 767.98"></app-social> -->
+  <!-- <app-social *ngIf="screenWidth >= 767.98"></app-social> -->
+</ng-container>

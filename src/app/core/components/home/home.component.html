@@ -1,27 +1,25 @@
 <!-- home page (landing page) -->
-<app-header></app-header>
-<ngb-carousel class="position-static carousel-fade" *ngIf="videos">
-  <ng-template *ngFor="let video of videos" ngbSlide>
-    <div class="picsum-img-wrapper">
-      <video
-        loop
-        muted
-        preload="auto"
-        oncanplay="this.play()"
-        onloadedmetadata="this.muted = true"
-        class="custom-video"
-      >
-        <source
-          src="../../../assets/videos/home/{{ video.name }}"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-    <div class="carousel-caption">
-      <div class="mid-div">
-        <h2 class="center-div">{{ video.text }}</h2>
+<ng-container *ngIf="videoLoaded">
+  <app-header></app-header>
+  <ngb-carousel class="position-static carousel-fade" *ngIf="videos">
+    <ng-template *ngFor="let video of videos" ngbSlide>
+      <div class="picsum-img-wrapper">
+        <video
+          loop
+          muted
+          preload="metadata"
+          oncanplay="this.play()"
+          onloadedmetadata="this.muted = true"
+          class="custom-video"
+          [src]="video.videoUrl"
+        ></video>
       </div>
-    </div>
-  </ng-template>
-</ngb-carousel>
-<app-social></app-social>
+      <div class="carousel-caption">
+        <div class="mid-div">
+          <h2 class="center-div">{{ video.text }}</h2>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <app-social></app-social>
+</ng-container>
