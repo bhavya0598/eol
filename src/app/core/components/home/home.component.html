@@ -7,9 +7,8 @@
         <video
           loop
           muted
-          preload="metadata"
-          oncanplay="this.play()"
-          onloadedmetadata="this.muted = true"
+          playsinline
+          autoplay="true"
           class="custom-video"
           [src]="video.videoUrl"
         ></video>
