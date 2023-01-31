@@ -49,10 +49,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadVideo();
+    this.loadVideo()
   }
 
-  loadVideo() {
+  loadVideo(): void {
     let count = 0;
     this.videos.forEach((video) => {
       this.loadContent
@@ -63,7 +63,9 @@ export class HomeComponent implements OnInit {
             URL.createObjectURL(data)
           );
           URL.revokeObjectURL(<string>video.videoUrl);
-          if (count == 3) this.videoLoaded = true;
+          if (count == 3) {
+            this.videoLoaded = true;
+          }
         });
     });
   }

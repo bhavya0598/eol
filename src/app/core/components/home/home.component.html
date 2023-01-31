@@ -5,10 +5,13 @@
     <ng-template *ngFor="let video of videos" ngbSlide>
       <div class="picsum-img-wrapper">
         <video
-          loop
+          preload="auto"
           muted
+          autoplay
+          loop
           playsinline
-          autoplay="true"
+          oncanplay="this.play()"
+          onloadedmetadata="this.muted = true"
           class="custom-video"
           [src]="video.videoUrl"
         ></video>
