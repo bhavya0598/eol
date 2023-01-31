@@ -6,7 +6,7 @@ import { AboutHomeComponent } from './components/about-home/about-home.component
 import { TherapeuticContextComponent } from './components/therapeutic-context/therapeutic-context.component';
 import { TherapistComponent } from './components/therapist/therapist.component';
 import { PhilosophyComponent } from './components/philosophy/philosophy.component';
-import { SharedModule } from 'shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [

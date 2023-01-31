@@ -3,7 +3,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
-import { SharedModule } from '../../../shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { BookComponent } from './components/book/book.component';
 
 @NgModule({
